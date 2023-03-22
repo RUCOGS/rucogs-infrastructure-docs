@@ -1,6 +1,7 @@
 name: build-sphinx-to-gh-pages
 
 env:
+  GITHUB_REPOSITORY: rucogs/rucogs-docs
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 on: 

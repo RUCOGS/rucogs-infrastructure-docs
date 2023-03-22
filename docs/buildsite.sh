@@ -9,6 +9,9 @@ apt-get -y install rsync
 pip install -r requirements.txt
 pip3 install -r requirements.txt
 pwd ls -lah
+
+git config --global --add safe.directory '*'
+
 export SOURCE_DATE_EPOCH=$(git log -1 --pretty=%ct)
  
 ##############
