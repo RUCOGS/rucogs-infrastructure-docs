@@ -1,13 +1,12 @@
-# Learn C
+# RUCOGS Documentation 📃
 
-A website for learning C
+Documentation for RUCOGS infrastructure
 
-Built with [Sphinx](https://www.sphinx-doc.org/en/master/), [Read the Docs](https://readthedocs.org/).
+Built with [Sphinx](https://www.sphinx-doc.org/en/master/).
 
 Available on:
 
-- [Github Pages](https://atlinx.github.io/LearnC)
-- [Read the Docs](https://learnc.readthedocs.io/)
+- [Github Pages](https://rucogs.github.io/RUCOGSDocs)
 
 ## How to Build
 1. To build it you'll need [Python](https://www.python.org/downloads/), [CMake](https://cmake.org/install/), and some other libraries.
