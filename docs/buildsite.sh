@@ -6,8 +6,7 @@ apt-get -y install python3
 apt-get -y install python3-pip
 apt-get -y install rsync
 
-pip install -r requirements.txt
-pip3 install -r requirements.txt
+python3 -m pip  install -r requirements.txt
 pwd ls -lah
 
 git config --global --add safe.directory '*'
