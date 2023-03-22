@@ -11,3 +11,4 @@ sphinx-notfound-page==0.7.1
 sphinx-autobuild==0.7.1
 
 sphinx-toolbox==2.17.0
+msgpack==1.05
