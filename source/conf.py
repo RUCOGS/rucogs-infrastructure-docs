@@ -17,13 +17,13 @@ import os
 
 # -- Project information -----------------------------------------------------
 
-project = 'Learn C'
-copyright = '2022, Atlinx'
-author = 'Atlinx'
+project = 'RUCOGS Docs'
+copyright = '2023, RUCOGS'
+author = 'RUCOGS'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0.0'
-html_title = "Learn C 🌱"
+html_title = "RUCOGS Docs 📕"
 
 
 # -- General configuration ---------------------------------------------------
