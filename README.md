@@ -6,7 +6,7 @@ Built with [Sphinx](https://www.sphinx-doc.org/en/master/).
 
 Available on:
 
-- [Github Pages](https://rucogs.github.io/RUCOGSDocs)
+- [Github Pages](https://rucogs.github.io/rucogs-docs)
 
 ## How to Build
 1. To build it you'll need [Python](https://www.python.org/downloads/), [CMake](https://cmake.org/install/), and some other libraries.
