@@ -1,8 +1,6 @@
 name: build-sphinx-to-gh-pages
 
 env:
-  GITHUB_ACTOR: atlinx
-  GITHUB_REPOSITORY: atlinx/learnc
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 on: 
