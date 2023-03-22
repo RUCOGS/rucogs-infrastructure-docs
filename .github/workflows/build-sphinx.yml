@@ -25,6 +25,10 @@ jobs:
           apt-get install -y git
           git clone "https://token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" .
         shell: bash
+      
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
 
       - name: Run build script for Sphinx pages
         env:
