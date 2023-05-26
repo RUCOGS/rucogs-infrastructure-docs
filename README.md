@@ -2,24 +2,20 @@
 
 Documentation for RUCOGS infrastructure
 
-Built with [Sphinx](https://www.sphinx-doc.org/en/master/).
+Built with [MkDocs Materia](https://squidfunk.github.io/mkdocs-material/).
 
 Available on:
 
 - [Github Pages](https://rucogs.github.io/rucogs-docs)
 
-## How to Build
-1. To build it you'll need [Python](https://www.python.org/downloads/), [CMake](https://cmake.org/install/), and some other libraries.
+## How to Write
+1. To write doucmentation it you'll need [Python](https://www.python.org/downloads/)
 
-2. Install libraries with:
-    `python -m pip install -r requirements.txt`
+2. Install mkdocs-material with:
+    `pip install mkdocs-material`
 
-3. Build:
+3. Running the documentation locally
     - Linux/Mac:
         ```bash
-        > make html
-        ```
-    - Windows:
-        ```bat
-        > make.bat html
+        > mkdocs serve
         ```
