@@ -1,5 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@800&display=swap');
+
 :root {
   --md-primary-fg-color: #b3002d;
-  --md-primary-fg-color--light: #e97b8a;
+  --md-primary-fg-color--light: #e98491;
   --md-primary-fg-color--dark: #550116;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-hue: 13;
+  --md-typeset-a-color: #fd003f;
+  --md-default-fg-color: hsla(var(--md-hue), 75%, 95%, 1);
+  --md-default-fg-color--light: hsla(var(--md-hue), 75%, 90%, 0.62);
+  --md-default-fg-color--lighter: hsla(var(--md-hue), 75%, 90%, 0.32);
+  --md-default-fg-color--lightest: hsla(var(--md-hue), 75%, 90%, 0.12);
+  --md-default-bg-color: #303030;
+  --md-default-bg-color--light: hsla(var(--md-hue), 15%, 21%, 0.54);
+  --md-default-bg-color--lighter: hsla(var(--md-hue), 15%, 21%, 0.26);
+  --md-default-bg-color--lightest: hsla(var(--md-hue), 15%, 21%, 0.07);
+}
+
+.md-header__title {
+  font-family: Urbanist;
+  font-weight: 800;
 }

@@ -21,6 +21,9 @@ __pycache__
 .DS_Store
 __MACOSX
 
+# MkDocs cache
+.cache
+
 # Windows image file caches
 [Tt]humbs.db
 [Tt]humbs.db:encryptable
