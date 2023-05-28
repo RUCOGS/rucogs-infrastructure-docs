@@ -17,6 +17,10 @@ Tools:
 - Angular - A frontend framework for building single-page applications and websites
 - Apollo GraphQL - A GraphQL client/server library
 
+## Resources
+
+- [COGS Website Guide](https://docs.google.com/presentation/d/1gwEKdKXfcKuwV3tSi1g1KpTUpPXnUnBlAgXtHFt1MRc).
+
 ## Contents
 
 - [Config](config.md)
