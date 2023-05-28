@@ -8,7 +8,7 @@
 
 [data-md-color-scheme="slate"] {
   --md-hue: 13;
-  --md-typeset-a-color: #fd003f;
+  --md-typeset-a-color: #ff2a5f;
   --md-default-fg-color: hsla(var(--md-hue), 75%, 95%, 1);
   --md-default-fg-color--light: hsla(var(--md-hue), 75%, 90%, 0.62);
   --md-default-fg-color--lighter: hsla(var(--md-hue), 75%, 90%, 0.32);
@@ -20,6 +20,7 @@
 }
 
 .md-header__title {
+  font-size: 1rem;
   font-family: Urbanist;
   font-weight: 800;
 }

@@ -15,6 +15,10 @@ plugins:
         font_family: Urbanist
   - search:
       lang: en
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
 theme:
   name: material
   logo: assets/cogs-logo-white.svg
