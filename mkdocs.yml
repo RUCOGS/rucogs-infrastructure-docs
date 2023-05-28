@@ -15,6 +15,7 @@ plugins:
         font_family: Urbanist
   - search:
       lang: en
+  - awesome-pages
 markdown_extensions:
   - admonition
   - pymdownx.details

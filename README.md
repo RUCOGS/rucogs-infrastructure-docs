@@ -2,20 +2,22 @@
 
 Documentation for RUCOGS infrastructure
 
-Built with [MkDocs Materia](https://squidfunk.github.io/mkdocs-material/).
+Built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/).
 
 Available on:
 
 - [Github Pages](https://rucogs.github.io/rucogs-docs)
 
-## How to Write
-1. To write doucmentation it you'll need [Python](https://www.python.org/downloads/)
+## Contributing
+1. To edit the doucmentation it you'll need [Python](https://www.python.org/downloads/)
 
 2. Install mkdocs-material with:
     `pip install mkdocs-material`
 
 3. Running the documentation locally
-    - Linux/Mac:
-        ```bash
-        > mkdocs serve
-        ```
+   
+    ```bash
+    > mkdocs serve
+    ```
+
+4. The documentation automatically builds and deploys to Github Pages when you push to the main branch.

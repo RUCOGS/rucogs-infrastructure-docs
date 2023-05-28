@@ -10,7 +10,7 @@ Developer Operations, or DevOps for short, covers the maintenance of software. T
     - [Service Management](hosting.md#service-management)
     - [NGINX](hosting.md#nginx)
         - [Let's Encrypt](hosting.md#lets-encrypt)
+- [Database](databse.md)
 - [Continuous Integration/Deployment](ci_cd.md)
     - [Website](ci_cd.md#website)
     - [Backups](ci_cd.md#backups)
-- [Database](databse.md)
