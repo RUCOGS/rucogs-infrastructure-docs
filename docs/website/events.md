@@ -6,9 +6,9 @@
 2. Make sure you have [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed on your computer.
 3. Clone the [website GitHub repository](https://github.com/rucogs/rucogs.github.io) locally if you don't have it already
 
-   ```bash
-   > git clone https://github.com/rucogs/rucogs.github.io
-   ```
+    ```bash
+    > git clone https://github.com/rucogs/rucogs.github.io
+    ```
 
 ## Event Page Template
 
@@ -42,7 +42,7 @@ Event pages tend to follow the same template, with a count down, a signup form, 
 1.  Uncomment the Scalet Game Jame PageLink in `src/_settings.ts`
 2.  Open `src\app\pages\scarlet-game-jam\scarlet-game-jam\scarlet-game-jam-page.component.ts`
 
-    - Edit the variables of the component to the correct values
+    -   Edit the variables of the component to the correct values
 
     !!! note "Variables"
 
@@ -80,7 +80,7 @@ Event pages tend to follow the same template, with a count down, a signup form, 
 1.  Uncomment the Global Game Jame PageLink in `src/_settings.ts`
 2.  Open `web\src\app\pages\global-game-jam\global-game-jam\global-game-jam-page.component.ts`
 
-    - Edit the variables of the component to the correct values
+    -   Edit the variables of the component to the correct values
 
     !!! note "Variables"
 

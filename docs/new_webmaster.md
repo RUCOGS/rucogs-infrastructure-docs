@@ -18,8 +18,8 @@ We also use Prettier to automatically format our code. If you're using VSCode yo
 
 We use Git for version control, with repositories hosted on GitHub. If you are unfamiliar with Git or GitHub you should check out the following tutorials:
 
-- [Learning Git Branching](https://learngitbranching.js.org/?locale=en_US)
-- [Introduction to Github](https://zarkom.notion.site/zarkom/Introduction-to-GitHub-202af6f64bbd4299b15f238dcd09d2a7#5177c6445c724460a400df2617e86bcd)
+-   [Learning Git Branching](https://learngitbranching.js.org/?locale=en_US)
+-   [Introduction to Github](https://zarkom.notion.site/zarkom/Introduction-to-GitHub-202af6f64bbd4299b15f238dcd09d2a7#5177c6445c724460a400df2617e86bcd)
 
 ### RUCOGS Infrastructure
 

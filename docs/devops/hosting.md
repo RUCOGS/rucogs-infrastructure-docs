@@ -2,11 +2,11 @@
 
 ## Recommended Reading
 
-- [Remote Development using SSH on VSCode](https://code.visualstudio.com/docs/remote/ssh)
-  - If you already use VSCode for development, using VSCode's ssh extension streamlines the experience of connecting your server.
-  - Once connected you can drag files into your VSCode file system to upload them, right click files to download, and perform all of VSCode's normal features (editing files, using the terminal, etc).
-- [The Linux Command Line for Beginners](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)
-- [How to Use Systemctl](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units)
+-   [Remote Development using SSH on VSCode](https://code.visualstudio.com/docs/remote/ssh)
+    -   If you already use VSCode for development, using VSCode's ssh extension streamlines the experience of connecting your server.
+    -   Once connected you can drag files into your VSCode file system to upload them, right click files to download, and perform all of VSCode's normal features (editing files, using the terminal, etc).
+-   [The Linux Command Line for Beginners](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)
+-   [How to Use Systemctl](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units)
 
 ## Overview
 
@@ -18,8 +18,8 @@ It's recommended to host the server on Linode, since their cheapest option is a 
 
 First you need to get the built files for the backend and discord bot onto your server. If your server is powerful enough, you can clone the repository onto the the server itself and then run a build there. Otherwise, you can build them locally on your machine, and then upload them to the server.
 
-- [Discord bot repository](https://github.com/RUCOGS/rucogs-discord-bot)
-- [Backend repository](https://github.com/RUCOGS/rucogs.github.io-backend)
+-   [Discord bot repository](https://github.com/RUCOGS/rucogs-discord-bot)
+-   [Backend repository](https://github.com/RUCOGS/rucogs.github.io-backend)
 
 Note that both the backend and discord bot repositories have a `.service` file in them. Make sure you have these files on your server as well. By default, these service files assume you cloned the repositories on your root directory, and that you've built a production version of the repos on the server itself. This means it expects the built files to be stored in a `dist` folder underneath each repository. If you decide to place the built files in a different location, don't forget to change the file paths in each of the service files.
 
@@ -76,9 +76,9 @@ For example instead of having to connect to our backend service using a port wit
 
 Please check of the following guides to set up NGINX:
 
-- [setting up NGINX in an Ubuntu 20.04 Linode](https://www.linode.com/docs/guides/how-to-install-and-use-nginx-on-ubuntu-20-04/)
-- [Beginner's Guide to NGINX](https://nginx.org/en/docs/beginners_guide.html)
-- [Sites Enabled with NGINX or Apache](https://www.linode.com/docs/guides/how-to-enable-disable-website/)
+-   [setting up NGINX in an Ubuntu 20.04 Linode](https://www.linode.com/docs/guides/how-to-install-and-use-nginx-on-ubuntu-20-04/)
+-   [Beginner's Guide to NGINX](https://nginx.org/en/docs/beginners_guide.html)
+-   [Sites Enabled with NGINX or Apache](https://www.linode.com/docs/guides/how-to-enable-disable-website/)
 
 Here's an example NGINX conf file used by Alan to host the backend on his personal website at [atlinx.net](https://atlinx.net). It's stored underneath the `site-enabled` directory of NGINX.
 

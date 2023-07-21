@@ -2,12 +2,12 @@
 
 ## Recommended Reading
 
-- [What is a Database?](https://www.oracle.com/database/what-is-database)
-- [Introduction to MongoDB](https://www.mongodb.com/docs/manual/introduction/)
-  - Explains the overall structuring of MongoDB a NoSQL database
-  - Ex. documents make up collections, which make up databases.
-- [SQL Tutorial - Full Database Course for Beginners](https://www.youtube.com/watch?v=HXV3zeQKqGY)
-  - Despite using MongoDB, a NoSQL database, we are still using the database like a traditional SQL one. We use collections as tables, and documents with fixed fields.
+-   [What is a Database?](https://www.oracle.com/database/what-is-database)
+-   [Introduction to MongoDB](https://www.mongodb.com/docs/manual/introduction/)
+    -   Explains the overall structuring of MongoDB a NoSQL database
+    -   Ex. documents make up collections, which make up databases.
+-   [SQL Tutorial - Full Database Course for Beginners](https://www.youtube.com/watch?v=HXV3zeQKqGY)
+    -   Despite using MongoDB, a NoSQL database, we are still using the database like a traditional SQL one. We use collections as tables, and documents with fixed fields.
 
 ## Overview
 
