@@ -17,7 +17,7 @@ Tools:
 - MongoDB - Our database.
 - GraphQL - An alternative communication method to REST, that allows users of the API to query exactly the data they need.
 - Apollo GraphQL - A GraphQL client/server library
-- Typetta - A Typescript ORM. We use Typetta to connect and interact with our MongoDB database. Typetta can automatically create a GraphQL endpoint, as well as provide per-column security for making queries in that endpoint.
+- Typetta - A Typescript ORM. We use Typetta to connect and interact with our MongoDB database. Typetta automatically creates a GraphQL endpoint, and provides per-column security on queries sent to that endpoint.
 - Node.JS - An asynchronous event-driven Javascript runtime that lets you build network applications.
 - Express.JS - A web server framework for Node.JS
 

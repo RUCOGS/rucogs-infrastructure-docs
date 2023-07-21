@@ -3,7 +3,7 @@
 ## Recommended Reading
 
 - [Introduction to Angular](https://angular.io/docs)
-    - [Angular Tour of Heroes Tutorial](https://angular.io/tutorial/tour-of-heroes)
+  - [Angular Tour of Heroes Tutorial](https://angular.io/tutorial/tour-of-heroes)
 - [Learn GraphQL](https://graphql.org/learn/)
 - [Apollo GraphQL Documentation](https://www.apollographql.com/docs/apollo-server/getting-started/)
 

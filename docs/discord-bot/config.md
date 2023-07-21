@@ -1,8 +1,9 @@
 # Config
 
-The behaviour of the discord bot is determined by config files located underneath `src/config`. Config files end in `.config.json`, and are automatically ignored by the repository's `.gitignore` to avoid leaking sensitive information into the git commit history.
+The behavior of the discord bot is determined by config files located underneath `src/config`. Config files end in `.config.json`, and are automatically ignored by the repository's `.gitignore` to avoid leaking sensitive information into the git commit history.
 
 There are two config files needed:
+
 - `auth.config.json`
 - `server.config.json`
 
@@ -12,12 +13,12 @@ The repository provides templates files ending in `.config.template.json` for th
 
 - `type` - The type of server this config file is for. It can be set to either `"production"` or `"debug"`. If you are using `"debug"`, make sure to also name the config as `auth.debug.config.json`.
 - `backendRootUser` - The user credentials used to log into the backend for full API access
-    - `username` - Username of the root user
-    - `password` - Password of the root user
+  - `username` - Username of the root user
+  - `password` - Password of the root user
 - `bot` - Settings for the Discord bot
-    - `clientId` - Discord bot client ID. You can find this on the Discord developers dashboard on the COGS discord account.
-    - `guildId` - The id of the guild the bot is operating in. For the debug config this should be set to the COGS Test Server, while for theproduction config it should be set to the official COGS Server. 
-    - `token` - Discord bot client secret. You ask an existing webmaster for the secret.
+  - `clientId` - Discord bot client ID. You can find this on the Discord developers dashboard on the COGS discord account.
+  - `guildId` - The id of the guild the bot is operating in. For the debug config this should be set to the COGS Test Server, while for the production config it should be set to the official COGS Server.
+  - `token` - Discord bot client secret. You ask an existing webmaster for the secret.
 
 ## Server Config
 
@@ -41,17 +42,17 @@ Since the server config doesn't contain any sensitive information, the configs u
 
 ```json
 {
-	"type": "production",
-	"backendDomain": "localhost:3000",
-	"cdnDomain": "atlinx.net/rucogs/backend",
-	"cdnHttpsPrefix": "https://",
-	"httpsPrefix": "http://",
-	"wssPrefix": "ws://",
-	"cdnRelativePath": "/cdn",
-	"dynamicCdnRelativePath": "/cdn/dynamic",
-	"graphqlRelativePath": "/graphql",
-	"selfHostedPrefix": "cdn://",
-	"archiveCategoryId": "804127935987843083"
+  "type": "production",
+  "backendDomain": "localhost:3000",
+  "cdnDomain": "atlinx.net/rucogs/backend",
+  "cdnHttpsPrefix": "https://",
+  "httpsPrefix": "http://",
+  "wssPrefix": "ws://",
+  "cdnRelativePath": "/cdn",
+  "dynamicCdnRelativePath": "/cdn/dynamic",
+  "graphqlRelativePath": "/graphql",
+  "selfHostedPrefix": "cdn://",
+  "archiveCategoryId": "804127935987843083"
 }
 ```
 
@@ -59,16 +60,16 @@ Since the server config doesn't contain any sensitive information, the configs u
 
 ```json
 {
-	"type": "debug",
-	"backendDomain": "localhost:3000",
-	"cdnDomain": "localhost:3000",
-	"cdnHttpsPrefix": "http://",
-	"httpsPrefix": "http://",
-	"wssPrefix": "ws://",
-	"cdnRelativePath": "/cdn",
-	"dynamicCdnRelativePath": "/cdn/dynamic",
-	"graphqlRelativePath": "/graphql",
-	"selfHostedPrefix": "cdn://",
-	"archiveCategoryId": "799858313835708446"
+  "type": "debug",
+  "backendDomain": "localhost:3000",
+  "cdnDomain": "localhost:3000",
+  "cdnHttpsPrefix": "http://",
+  "httpsPrefix": "http://",
+  "wssPrefix": "ws://",
+  "cdnRelativePath": "/cdn",
+  "dynamicCdnRelativePath": "/cdn/dynamic",
+  "graphqlRelativePath": "/graphql",
+  "selfHostedPrefix": "cdn://",
+  "archiveCategoryId": "799858313835708446"
 }
 ```

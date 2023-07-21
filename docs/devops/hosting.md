@@ -3,8 +3,8 @@
 ## Recommended Reading
 
 - [Remote Development using SSH on VSCode](https://code.visualstudio.com/docs/remote/ssh)
-    - If you already use VSCode for development, using VSCode's ssh extension streamlines the experience of connecting your server.
-    - Once connected you can drag files into your VSCode file system to upload them, right click files to download, and perform all of VSCode's normal features (editing files, using the terminal, etc).  
+  - If you already use VSCode for development, using VSCode's ssh extension streamlines the experience of connecting your server.
+  - Once connected you can drag files into your VSCode file system to upload them, right click files to download, and perform all of VSCode's normal features (editing files, using the terminal, etc).
 - [The Linux Command Line for Beginners](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)
 - [How to Use Systemctl](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units)
 
@@ -57,6 +57,13 @@ systemctl restart myservice
 
     The `rucogs.service` and `rucogs-discord.service` files are configured to restart themselves if they ever crash.
 
+To setup the music bot, follow the instructions on the [JMusicBot wiki](https://jmusicbot.com/setup/). This site includes information on setting up a `.service` file for the bot.
+
+!!! note
+
+    You may need to install the required dependencies on your server to get the services to run. Both `rucogs` and
+    `rucogs-discord` services require Node.js and the music bot requires Java.
+
 ### Linode Mailing Setup
 
 By default, Linode blocks mail ports to prevent spam. If you are using Linode for your server hosting, please make sure to open a support ticket to request mail port access. You should explain to the support team that you need the mailing port to host a backend for the game development club at Rutgers University, which may send mail to club members for identity verification purposes. They should lift the mail port ban in a few business-days after seeing your request.
@@ -65,13 +72,13 @@ By default, Linode blocks mail ports to prevent spam. If you are using Linode fo
 
 NGINX is a web server designed for use cases involving high volumes of traffic, and it’s a popular, lightweight, high-performance solution. We can use NGINX to setup SSL/TLS certificates, as well use it as a proxy server to forward traffic from specific URL locations to our running services.
 
-For example instead of having to connect to our backend service using a port with `mydomain.com:8000`, you can use `mydomain.com/rucogs/backend` to connect to the server. 
+For example instead of having to connect to our backend service using a port with `mydomain.com:8000`, you can use `mydomain.com/rucogs/backend` to connect to the server.
 
 Please check of the following guides to set up NGINX:
 
 - [setting up NGINX in an Ubuntu 20.04 Linode](https://www.linode.com/docs/guides/how-to-install-and-use-nginx-on-ubuntu-20-04/)
 - [Beginner's Guide to NGINX](https://nginx.org/en/docs/beginners_guide.html)
-- [Sitges Enabled with NGINX or Apache](https://www.linode.com/docs/guides/how-to-enable-disable-website/)
+- [Sites Enabled with NGINX or Apache](https://www.linode.com/docs/guides/how-to-enable-disable-website/)
 
 Here's an example NGINX conf file used by Alan to host the backend on his personal website at [atlinx.net](https://atlinx.net). It's stored underneath the `site-enabled` directory of NGINX.
 
@@ -97,7 +104,7 @@ server {
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
-		
+
 		client_max_body_size 100M;
 	}
 
@@ -136,12 +143,12 @@ server {
 
 ### Lets Encrypt
 
-An important part of setting up the server is getting SSL/TLS certificates. These certificates let you encrypt traffic to the server, making communication more secure. Sites that have SSL/TLS certificats will show a lock icon in the browser when connecting to them. If you are using NGINX, you can follow [this NGINX guide on setting up Let's Encrypt.](https://www.nginx.com/blog/using-free-ssltls-certificates-from-lets-encrypt-with-nginx/).
+An important part of setting up the server is getting SSL/TLS certificates. These certificates let you encrypt traffic to the server, making communication more secure. Sites that have SSL/TLS certificates will show a lock icon in the browser when connecting to them. If you are using NGINX, you can follow [this NGINX guide on setting up Let's Encrypt.](https://www.nginx.com/blog/using-free-ssltls-certificates-from-lets-encrypt-with-nginx/).
 
 !!! note
 
     It's important to pass on hosting of the backend as new Webmasters replace old ones.
 
     Member who is hosting the backend and discord bot as of **5/27/23**:
-    
+
     - Alan Tong (Linode Nanode - $5 a month)

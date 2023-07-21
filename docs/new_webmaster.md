@@ -2,13 +2,13 @@
 
 ## Overview
 
-This documentation will assume you have prequesite knowledge of frameworks being used, therefore teaching is out of the scope of this site. However, there will be recommended reading sections at the start of each section to give an entry point to learning a new topic.
+This documentation will assume you have prerequisite knowledge of frameworks being used, therefore teaching is out of the scope of this site. However, there will be recommended reading sections at the start of each section to give an entry point to learning a new topic.
 
 For the ease of learning and consistency, all COGS infrastructure projects are written in Typescript. Please check out the [Typescript documentation](https://www.typescriptlang.org/docs/) if you are unfamiliar with the language.
 
 ## Tools
 
-It's recommended to use [VSCode](https://code.visualstudio.com/download) to develop since many extensions are available to assist you. 
+It's recommended to use [VSCode](https://code.visualstudio.com/download) to develop since many extensions are available to assist you.
 
 ### Code Formatting
 
@@ -37,7 +37,7 @@ Since Git doesn't download submodules when you clone it, you must then initializ
 > git submodule update --init
 ```
 
-If you ever need to update the submodules to their latest versions from their source repoistories, run
+If you ever need to update the submodules to their latest versions from their source repositories, run
 
 ```bash
 > git submodule update --remote

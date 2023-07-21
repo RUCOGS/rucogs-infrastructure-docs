@@ -5,7 +5,6 @@
 - [Node.js Tutorial for Beginners](https://www.youtube.com/watch?v=TlB_eWDSMt4)
 - [Discord JS Introduction](https://discordjs.guide/#before-you-begin)
 
-
 ## Overview
 
 The discord bot is built on Node.JS with Discord.JS using Typescript. GraphQL is used to communicate with the backend.

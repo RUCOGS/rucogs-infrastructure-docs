@@ -1,17 +1,16 @@
-
 # Structure
 
 ## Folder Structure
 
-- `src` - Contains 
-    - `server.ts` - The entry point of the discord bot. It reads the command line arguments or environment variables to start a server in devlopment or production mode.
-    - `config` - Stores config files that change how the discord bot runs. See the [Config section](#config) for more information  
-    - `commands` - Contains code for slash commands. Each slash command is represented by a script that exports a `Command` object, which defines the command and the handlers for it. Note that sub commands are handled manually by each command script.
-    - `_tools` - Contains code used by Node.JS scripts defined in our `package.json`.
-    - `generated` - Auto-generated code based on our GraphQL schema 
-    - `misc` - Contains miscallenous helper code
-    - `shared` - Code that's shared between the backend and frontends
-- `dist` - Where the release version of the discord bot is stored once you build it. 
+- `src` - Contains
+  - `server.ts` - The entry point of the discord bot. It reads the command line arguments or environment variables to start a server in devlopment or production mode.
+  - `config` - Stores config files that change how the discord bot runs. See the [Config section](#config) for more information
+  - `commands` - Contains code for slash commands. Each slash command is represented by a script that exports a `Command` object, which defines the command and the handlers for it. Note that sub commands are handled manually by each command script.
+  - `_tools` - Contains code used by Node.JS scripts defined in our `package.json`.
+  - `generated` - Auto-generated code based on our GraphQL schema
+  - `misc` - Contains miscallenous helper code
+  - `shared` - Code that's shared between the backend and frontends
+- `dist` - Where the release version of the discord bot is stored once you build it.
 - `gulpfile.js` - Script that automates copying assets over when you build the discord bot.
 - `rucogs-discord.service` - Service file for hosting discord bot. See [DevOps/Hosting](../devops/hosting.md) for more information.
 - `tsconfig.json` - Configuration for Typescript
