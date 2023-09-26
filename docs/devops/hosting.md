@@ -151,4 +151,12 @@ An important part of setting up the server is getting SSL/TLS certificates. Thes
 
     Member who is hosting the backend and discord bot as of **5/27/23**:
 
-    - Alan Tong (Linode Nanode - $5 a month)
+    - Alan Tong (Linode Nanode - $5 a month) (Discord: `atlinx`)
+
+!!! note
+
+		It's important to ensure we have access to the cogs.club domain.
+
+		Alumni who currently owns the cogs.club domain:
+
+		- Harry Stern (Discord: `ohmyachingtentacles`)
