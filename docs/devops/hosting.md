@@ -21,25 +21,64 @@ First you need to get the built files for the backend and discord bot onto your 
 -   [Discord bot repository](https://github.com/RUCOGS/rucogs-discord-bot)
 -   [Backend repository](https://github.com/RUCOGS/rucogs.github.io-backend)
 
-Note that both the backend and discord bot repositories have a `.service` file in them. Make sure you have these files on your server as well. By default, these service files assume you cloned the repositories on your root directory, and that you've built a production version of the repos on the server itself. This means it expects the built files to be stored in a `dist` folder underneath each repository. If you decide to place the built files in a different location, don't forget to change the file paths in each of the service files.
+On Linux, there is a `systemd` or "System Daemon" program that's in charge of starting, stopping, and restarting processes. We use `systemd` to run the backend, discord-bot, and music bots since it allows these services to always be up -- even if they crash, they will restart themselves automatically. To manage these `systemd` services, we will use the `systemctl` or "System Control", which is a command-line tool to interact with `systemd`. Using `systemctl`, we can enable/disable the services managed by `systemd`.
 
-Given a `.service` file named `myservice.service`, you can start it by navigating to the directory containing the file and then running
+Note that both the backend and discord bot repositories have a `.service` file in them. Make sure you have these files on your server as well. By default, these service files assume you cloned the repositories on your root directory, and that you've built a production version of the repositories on the server itself. This means the `.serivce` files expect the built files for each backend application to be stored in a `dist` folder underneath each backend application's repository. If you decide to place the built files in a different location, don't forget to change the file paths in each of the service files.
+
+Below is a visualization of how this guide expects the various repository folders to be set up. Note that some files are omitted for brevity.
+
+```
+/root
+├─ rucogs-discord-bot
+│  ├─ dist
+│  │  └─ BUILT FILES FOR DISCORD BOT
+│  └─ rucogs-discord.service
+├─ rucogs-music
+│  ├─ BUILT FILES FOR MUSIC
+│  └─ rucogs-music.service
+└─ rucogs.github.io-backend
+   └─ dist
+   │  └─ BUILT FILES FOR BACKEND
+   └─ rucogs.service
+```
+
+To make `.service` files visible to `systemd`, it must be placed within the `/etc/systemd/system/` folder. However instead of moving the files, you can instead create a "symbolic link" for each `.service` file, and place each link inside the `/etc/systemd/system/` folder. Symbolic links in Linux are similar to shortcuts on Windows, and act as "pointers" to files. By having a symbolic link to our service files, we don't need to dig through the `/etc/systemd/system/` folder to find the service files whenever we want to edit them. Instead, we can access them directly from each repository folder, which is very convenient.
+
+`systemctl` can actually create a symbolic link for us inside of the `/etc/systemd/system` folder. This is done by running the following command.
+
+```bash
+systemctl enable /root/path/to/myservice.service
+```
+
+!!! note
+
+    For example, if you wanted to add the `rucogs.service`, you can run
+
+    ```bash
+    systemctl enable /root/rucogs.github.io-backend/rucogs.service
+    ```
+
+    Note that enabling a service will also ensure the service starts whenever the computer boots up. This can ensure you're services are always online, event after your cloud server has rebooted due to a crash or periodic maintenance.
+
+Finally, you can start it manually by navigating to the directory containing the service file and then running
 
 ```bash
 systemctl start myservice
 ```
 
-So in order to start the backend and discord bots, you need to navigate to the directory containing `rucogs.service` and run
+!!! note
 
-```bash
-sudo systemctl start rucogs
-```
+    So in order to start the backend and discord bots, you need to navigate to the directory containing `rucogs.service` and run
 
-Then navigate to the directory containing `rucogs-discord.service` and run
+    ```bash
+    systemctl start rucogs
+    ```
 
-```bash
-sudo systemctl start rucogs-discord
-```
+    Then navigate to the directory containing `rucogs-discord.service` and run
+
+    ```bash
+    systemctl start rucogs-discord
+    ```
 
 To check the status of a service and view it's output, you can do
 
@@ -63,6 +102,13 @@ To setup the music bot, follow the instructions on the [JMusicBot wiki](https://
 
     You may need to install the required dependencies on your server to get the services to run. Both `rucogs` and
     `rucogs-discord` services require Node.js and the music bot requires Java.
+
+### Config Files
+
+The backend and discord bot applications both read data from special `config.json` files under their `src/config/` folders. The `src/config/` folders are located underneath the root of each repository. These config files contain sensitive information, and are excluded from the GitHub repositories by default. Please ensure these config files are set up properly.
+
+-   [Backend Config](../backend/config.md)
+-   [Discord-Bot Config](../discord-bot/config.md)
 
 ### Linode Mailing Setup
 
