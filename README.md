@@ -6,7 +6,7 @@ Built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/).
 
 Available on:
 
-- [Github Pages](https://rucogs.github.io/rucogs-docs)
+-   [GitHub Pages](https://rucogs.github.io/rucogs-docs)
 
 ## Contributing
 
@@ -17,8 +17,8 @@ Available on:
 
 3. Running the documentation locally
 
-   ```bash
-   > mkdocs serve
-   ```
+    ```bash
+    > mkdocs serve
+    ```
 
-4. The documentation automatically builds and deploys to Github Pages when you push to the main branch.
+4. The documentation automatically builds and deploys to GitHub Pages when you push to the main branch.

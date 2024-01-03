@@ -53,7 +53,7 @@ To add an article, follow the steps below:
     > py update_articles.py
     ```
 
-3. Commit and push your changes to Github
+3. Commit and push your changes to GitHub
 
     ```bash
     > git add .

@@ -9,7 +9,7 @@
 
 ## Overview
 
-The website is built on Angular using Typescript. GraphQL is used to communicate with the backend.
+The website is built on Angular using TypeScript. GraphQL is used to communicate with the backend.
 
 Tools:
 

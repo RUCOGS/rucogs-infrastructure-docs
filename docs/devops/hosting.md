@@ -29,7 +29,7 @@ Given a `.service` file named `myservice.service`, you can start it by navigatin
 systemctl start myservice
 ```
 
-So in order to start the backend and discord bots, you need to bavigate to the directory containing `rucogs.service` and run
+So in order to start the backend and discord bots, you need to navigate to the directory containing `rucogs.service` and run
 
 ```bash
 sudo systemctl start rucogs
@@ -80,7 +80,7 @@ Please check of the following guides to set up NGINX:
 -   [Beginner's Guide to NGINX](https://nginx.org/en/docs/beginners_guide.html)
 -   [Sites Enabled with NGINX or Apache](https://www.linode.com/docs/guides/how-to-enable-disable-website/)
 
-Here's an example NGINX conf file used by Alan to host the backend on his personal website at [atlinx.net](https://atlinx.net). It's stored underneath the `site-enabled` directory of NGINX.
+Here's an example NGINX `conf` file used by Alan to host the backend on his personal website at [atlinx.net](https://atlinx.net). It's stored underneath the `site-enabled` directory of NGINX.
 
 ```NGINX
 # /etc/nginx/sites-enabled/default
@@ -155,8 +155,8 @@ An important part of setting up the server is getting SSL/TLS certificates. Thes
 
 !!! note
 
-		It's important to ensure we have access to the cogs.club domain.
+    	It's important to ensure we have access to the cogs.club domain.
 
-		Alumni who currently owns the cogs.club domain:
+    	Alumni who currently owns the cogs.club domain:
 
-		- Harry Stern (Discord: `ohmyachingtentacles`)
+    	- Harry Stern (Discord: `ohmyachingtentacles`)

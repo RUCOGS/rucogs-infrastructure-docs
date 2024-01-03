@@ -14,4 +14,4 @@ A table of contents is available on the left side of the site. You can use the s
 -   [Backend](backend/index.md)
 -   [Discord Bot](discord-bot/index.md)
 -   [Music Bot](music-bot/index.md)
--   [Devops](devops/index.md)
+-   [DevOps](devops/index.md)

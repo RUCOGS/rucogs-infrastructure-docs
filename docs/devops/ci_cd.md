@@ -2,15 +2,15 @@
 
 ## Recommended Reading
 
--   [Understanding Github Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
+-   [Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
 
 ## Overview
 
-Continuous integration and deployment is the process of automatically running unit tests and building/deploying software. We only use Github Actions at the moment to automate deployment of the website as well as perform weekly backups.
+Continuous integration and deployment is the process of automatically running unit tests and building/deploying software. We only use GitHub Actions at the moment to automate deployment of the website as well as perform weekly backups.
 
 ## Website
 
-We use this for our website, since it's hosted on Github Pages. Inside our `rucogs.github.io` repository, we have `.github/workflows/gh-pages-deployment.yml` workflow show below. This workflow automatically builds and deploys the website to Github Pages any time there is a commit made to the `main` branch.
+We use this for our website, since it's hosted on GitHub Pages. Inside our `rucogs.github.io` repository, we have `.github/workflows/gh-pages-deployment.yml` workflow show below. This workflow automatically builds and deploys the website to GitHub Pages any time there is a commit made to the `main` branch.
 
 ```yaml
 name: Deploy to GitHub Pages
@@ -48,7 +48,7 @@ jobs:
 
 ## Backups
 
-We also use Github Actions to automate backups of both the database and users' uploaded files. Inside our `rucogs-infrastructure-backup` repository, we have `.github/workflows/actions.yml` workflow shown below. This workflows requires the URI connection string to the MongoDB database, as well as the
+We also use GitHub Actions to automate backups of both the database and users' uploaded files. Inside our `rucogs-infrastructure-backup` repository, we have `.github/workflows/actions.yml` workflow shown below. This workflows requires the URI connection string to the MongoDB database, as well as the
 
 ```yaml
 name: 📦 Make Backups
@@ -159,7 +159,7 @@ jobs:
 
 ### Environment Variables
 
-Nonsensitive configuration can be done in the workflow file itself
+Non-sensitive configuration can be done in the workflow file itself
 
 -   `MONGODB_TOOLS_DOWNLOAD` - A environment variable that links to a download for `mongodump`, a tool that can dump the contents of the database into a file.
     We use this to create a backup of the MongoDB database hosted on MongoDB Atlas.
@@ -169,8 +169,8 @@ Nonsensitive configuration can be done in the workflow file itself
 
 ### Secrets
 
-Sensitive information is stored as a repository secret on our Github repository. Here is a list of the follow secrets that can be configured
+Sensitive information is stored as a repository secret on our GitHub repository. Here is a list of the follow secrets that can be configured
 
 -   `MONGO_URI` - The [MongoDB connection string](https://www.mongodb.com/docs/manual/reference/connection-string/) used to connect to our `MainDB` database
--   `BACKEND_URI` - The ssh connection string to the backend. It's typically `root@123.45.678` where `123.45.678` represents your server's ip address.
+-   `BACKEND_URI` - The ssh connection string to the backend. It's typically `root@123.45.678` where `123.45.678` represents your server's IP address.
 -   `BACKEND_ROOT_PASS` - The password of the backend for the user you specified in the `BACKEND_URI`.

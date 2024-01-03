@@ -19,7 +19,7 @@ Event pages tend to follow the same template, with a count down, a signup form, 
     - `startDate` - Start date of the event
     - `eventActive` - Whether the event is in progress or not.
         - If `false`, a timer will be shown that counts down to the kickoff date and time.
-        - If  `true`, then the itchioLink will be displayed, and the signup form will be renamed to "Late Signup Form".
+        - If  `true`, then the `itchioLink` will be displayed, and the signup form will be renamed to "Late Signup Form".
 
 !!! note "Sections"
 
@@ -29,17 +29,17 @@ Event pages tend to follow the same template, with a count down, a signup form, 
         - Displays the itinerary for the game jam.
         - Each itinerary entry is displayed as an `app-event-card`, and has a main section and a Google Maps embed.
         - Make sure the Google Maps `iframe` embed has it's `src` attribute filled out to the correct value.
-            - This src value can be obtained by going to Google Maps
+            - This `src` value can be obtained by going to Google Maps
             - Finding the location of the event
             - Clicking on Share -> Embed a map
-            - Copy the string from the `src` section of the iframe that Google Maps generates for you.
+            - Copy the string from the `src` section of the `iframe` that Google Maps generates for you.
     - `FAQ` section
         - Displays frequently asked questions.
         - Feel free to add or remove questions as needed.
 
 ## Scarlet Game Jam
 
-1.  Uncomment the Scalet Game Jame PageLink in `src/_settings.ts`
+1.  Uncomment the Scarlet Game Jam PageLink in `src/_settings.ts`
 2.  Open `src\app\pages\scarlet-game-jam\scarlet-game-jam\scarlet-game-jam-page.component.ts`
 
     -   Edit the variables of the component to the correct values
@@ -52,12 +52,12 @@ Event pages tend to follow the same template, with a count down, a signup form, 
         - `endDateTime` - Time interval of the closing ceremony during the endDate
         - `merchLink` - Link to the merch store
         - `signupLink` - Link to the game jam signup form
-        - `itchioLink` - Link to the game jam itchio page
+        - `itchioLink` - Link to the game jam Itch.io page
         - `startDateEventPage` - GetInvolved event page for the kickoff event
         - `endDateEventPage` - GetInvolved event page for the closing ceremony
         - `eventActive` - Whether the event is in progress or not.
             - If `false`, a timer will be shown that counts down to the kickoff date and time.
-            - If  `true`, then the itchioLink will be displayed, and the signup form will be renamed to "Late Signup Form".
+            - If  `true`, then the `itchioLink` will be displayed, and the signup form will be renamed to "Late Signup Form".
 
 3.  Tweak the `scarlet-game-jam-page.component.html` to your needs
 
@@ -77,7 +77,7 @@ Event pages tend to follow the same template, with a count down, a signup form, 
 
 ## Global Game Jam
 
-1.  Uncomment the Global Game Jame PageLink in `src/_settings.ts`
+1.  Uncomment the Global Game Jam PageLink in `src/_settings.ts`
 2.  Open `web\src\app\pages\global-game-jam\global-game-jam\global-game-jam-page.component.ts`
 
     -   Edit the variables of the component to the correct values
@@ -87,7 +87,7 @@ Event pages tend to follow the same template, with a count down, a signup form, 
         - `startDate` - Start date and time of the event
         - `eventActive` - Whether the event is in progress or not
             - If `false`, a timer will be shown that counts down to the kickoff date and time.
-            - If  `true`, then the itchioLink will be displayed, and the signup form will be renamed to "Late Signup Form".
+            - If  `true`, then the Itch.io Link will be displayed, and the signup form will be renamed to "Late Signup Form".
         - `signupLink` - Link to the Global Game Jam signup form
         - `siteLink` - Link to the Global Game Jam site link
 

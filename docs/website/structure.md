@@ -14,12 +14,12 @@
         -   `blog-page-articles` - Stores articles by year
         -   `icons` - Stores COGS logo icons
         -   `images` - Stores images
-        -   `js` - Stores Javascript
+        -   `js` - Stores JavaScript
         -   `pictures-page-images` - Stores pictures page images by year and semester
     -   `_server_.ts` - The entry point of the website. It reads the command line arguments or environment variables to start a server in development or production mode.
 -   `dist` - Where the release version of the website is stored once you build it.
 -   `angular.json` - Configuration for Angular
--   `tsconfig.json` - Configuration for Typescript
+-   `tsconfig.json` - Configuration for TypeScript
 -   `update_articles.py` - Used to add new articles to the blog page. See [Writing Blog Articles](blog.md).
 -   `update_images.py` - Used to add new images to the pictures page. See [Uploading Pictures](pictures.md).
 
@@ -35,7 +35,7 @@
     -   `selfhosted:build` - Builds the site with a base-href of `rucogs/frontend`.
     -   `selfhosted:copybuild` - Copies the built files to the `/var/www/rucogs`.
     -   `selfhosted:launch` - Runes `selfhosted:build` then `selfhosted:copybuild`.
--   `pretty` - Run the prettier formatter on the Typescript files within `src`.
+-   `pretty` - Run the prettier formatter on the TypeScript files within `src`.
 
 !!! note
 

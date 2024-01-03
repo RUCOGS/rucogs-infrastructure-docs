@@ -4,7 +4,7 @@
 
 This documentation will assume you have prerequisite knowledge of frameworks being used, therefore teaching is out of the scope of this site. However, there will be recommended reading sections at the start of each section to give an entry point to learning a new topic.
 
-For the ease of learning and consistency, all COGS infrastructure projects are written in Typescript. Please check out the [Typescript documentation](https://www.typescriptlang.org/docs/) if you are unfamiliar with the language.
+For the ease of learning and consistency, all COGS infrastructure projects are written in TypeScript. Please check out the [TypeScript documentation](https://www.typescriptlang.org/docs/) if you are unfamiliar with the language.
 
 ## Tools
 
@@ -19,7 +19,7 @@ We also use Prettier to automatically format our code. If you're using VSCode yo
 We use Git for version control, with repositories hosted on GitHub. If you are unfamiliar with Git or GitHub you should check out the following tutorials:
 
 -   [Learning Git Branching](https://learngitbranching.js.org/?locale=en_US)
--   [Introduction to Github](https://zarkom.notion.site/zarkom/Introduction-to-GitHub-202af6f64bbd4299b15f238dcd09d2a7#5177c6445c724460a400df2617e86bcd)
+-   [Introduction to GitHub](https://zarkom.notion.site/zarkom/Introduction-to-GitHub-202af6f64bbd4299b15f238dcd09d2a7#5177c6445c724460a400df2617e86bcd)
 
 ### RUCOGS Infrastructure
 
