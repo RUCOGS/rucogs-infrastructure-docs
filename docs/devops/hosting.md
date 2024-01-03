@@ -105,7 +105,7 @@ To setup the music bot, follow the instructions on the [JMusicBot wiki](https://
 
 ### Config Files
 
-The backend and discord bot applications both read data from special `config.json` files under their `src/config/` folders. The `src/config/` folders are located underneath the root of each repository. These config files contain sensitive information, and are excluded from the GitHub repositories by default. Please ensure these config files are set up properly.
+The backend and discord bot applications both read data from special `config.json` files under their `src/config/` folders. The `src/config/` folders are located underneath the root of each repository. These config files contain sensitive information, and are excluded from the GitHub repositories by default. Please ensure these config files are set up properly. The documentation on the config files are linked below.
 
 -   [Backend Config](../backend/config.md)
 -   [Discord-Bot Config](../discord-bot/config.md)
