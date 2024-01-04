@@ -14,6 +14,10 @@ After developing software we need to host it on a server. It's recommended to ho
 
 It's recommended to host the server on Linode, since their cheapest option is a `Nanode`, which charges $5 a month.
 
+!!! note
+
+    Currently, the club hosts the backend on a Nanode under a Linode account registered with the rutgerscogs@gmail.com account. If you're the current webmaster, please ensure you have access to this account.
+
 ## Service Management
 
 First you need to get the built files for the backend and discord bot onto your server. If your server is powerful enough, you can clone the repository onto the the server itself and then run a build there. Otherwise, you can build them locally on your machine, and then upload them to the server.
@@ -131,59 +135,42 @@ Here's an example NGINX `conf` file used by Alan to host the backend on his pers
 ```NGINX
 # /etc/nginx/sites-enabled/default
 server {
-	root /var/www/html;
+    server_name backend.cogs.club www.cogs.club;
 
-	location /rucogs/test/frontend/ {
-		proxy_pass http://localhost:8081/rucogs/test/frontend/;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "upgrade";
-	}
+    root /var/www/html;
 
-	location /rucogs/frontend {
-		alias /var/www/rucogs/;
-		try_files $uri $uri/ /index.html =404;
-	}
-
-	location /rucogs/backend/ {
-		proxy_pass http://localhost:3000/;
+	location /backend/ {
+        proxy_pass http://localhost:3000/;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
 
-		client_max_body_size 100M;
-	}
+        client_max_body_size 100M;
+    }
 
-	server_name atlinx.net www.atlinx.net; # managed by Certbot
+    listen [::]:443 ssl ipv6only=on; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/backend.cogs.club/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/backend.cogs.club/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
-	listen [::]:443 ssl ipv6only=on; # managed by Certbot
-	listen 443 ssl; # managed by Certbot
-	ssl_certificate /etc/letsencrypt/live/atlinx.net/fullchain.pem; # managed by Certbot
-	ssl_certificate_key /etc/letsencrypt/live/atlinx.net/privkey.pem; # managed by Certbot
-	include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-	ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 }
 
 server {
-	location /nginx_status {
-		stub_status on;
-		allow 127.0.0.1;
-		deny all;
-	}
+    if ($host = www.backend.cogs.club) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
 
-	if ($host = www.atlinx.net) {
-			return 301 https://$host$request_uri;
-	} # managed by Certbot
+    if ($host = backend.cogs.club) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
 
-	if ($host = atlinx.net) {
-			return 301 https://$host$request_uri;
-	} # managed by Certbot
+    listen 80;
+    listen [::]:80;
+    server_name backend.cogs.club www.backend.cogs.club;
 
-	listen 80 default_server;
-	listen [::]:80 default_server;
-	server_name atlinx.net www.atlinx.net;
-
-	return 404; # managed by Certbot
+    return 404; # managed by Certbot
 }
 ```
 
@@ -195,7 +182,7 @@ An important part of setting up the server is getting SSL/TLS certificates. Thes
 
     It's important to pass on hosting of the backend as new Webmasters replace old ones.
 
-    Member who is hosting the backend and discord bot as of **5/27/23**:
+    Member who is paying for the backend and discord bot as of **5/27/23**:
 
     - Alan Tong (Linode Nanode - $5 a month) (Discord: `atlinx`)
 
