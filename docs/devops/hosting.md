@@ -85,59 +85,59 @@ Here's an example NGINX conf file used by Alan to host the backend on his person
 ```NGINX
 # /etc/nginx/sites-enabled/default
 server {
-	root /var/www/html;
+  root /var/www/html;
 
-	location /rucogs/test/frontend/ {
-		proxy_pass http://localhost:8081/rucogs/test/frontend/;
+  location /rucogs/test/frontend/ {
+    proxy_pass http://localhost:8081/rucogs/test/frontend/;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
-	}
+  }
 
-	location /rucogs/frontend {
-		alias /var/www/rucogs/;
-		try_files $uri $uri/ /index.html =404;
-	}
+  location /rucogs/frontend {
+    alias /var/www/rucogs/;
+    try_files $uri $uri/ /index.html =404;
+  }
 
-	location /rucogs/backend/ {
-		proxy_pass http://localhost:3000/;
+  location /rucogs/backend/ {
+    proxy_pass http://localhost:3000/;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
 
-		client_max_body_size 100M;
-	}
+    client_max_body_size 100M;
+  }
 
-	server_name atlinx.net www.atlinx.net; # managed by Certbot
+  server_name atlinx.net www.atlinx.net; # managed by Certbot
 
-	listen [::]:443 ssl ipv6only=on; # managed by Certbot
-	listen 443 ssl; # managed by Certbot
-	ssl_certificate /etc/letsencrypt/live/atlinx.net/fullchain.pem; # managed by Certbot
-	ssl_certificate_key /etc/letsencrypt/live/atlinx.net/privkey.pem; # managed by Certbot
-	include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-	ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+  listen [::]:443 ssl ipv6only=on; # managed by Certbot
+  listen 443 ssl; # managed by Certbot
+  ssl_certificate /etc/letsencrypt/live/atlinx.net/fullchain.pem; # managed by Certbot
+  ssl_certificate_key /etc/letsencrypt/live/atlinx.net/privkey.pem; # managed by Certbot
+  include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+  ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 }
 
 server {
-	location /nginx_status {
-		stub_status on;
-		allow 127.0.0.1;
-		deny all;
-	}
+  location /nginx_status {
+    stub_status on;
+    allow 127.0.0.1;
+    deny all;
+  }
 
-	if ($host = www.atlinx.net) {
-			return 301 https://$host$request_uri;
-	} # managed by Certbot
+  if ($host = www.atlinx.net) {
+      return 301 https://$host$request_uri;
+  } # managed by Certbot
 
-	if ($host = atlinx.net) {
-			return 301 https://$host$request_uri;
-	} # managed by Certbot
+  if ($host = atlinx.net) {
+      return 301 https://$host$request_uri;
+  } # managed by Certbot
 
-	listen 80 default_server;
-	listen [::]:80 default_server;
-	server_name atlinx.net www.atlinx.net;
+  listen 80 default_server;
+  listen [::]:80 default_server;
+  server_name atlinx.net www.atlinx.net;
 
-	return 404; # managed by Certbot
+  return 404; # managed by Certbot
 }
 ```
 
@@ -155,8 +155,8 @@ An important part of setting up the server is getting SSL/TLS certificates. Thes
 
 !!! note
 
-		It's important to ensure we have access to the cogs.club domain.
+    It's important to ensure we have access to the cogs.club domain.
 
-		Alumni who currently owns the cogs.club domain:
+    Alumni who currently owns the cogs.club domain:
 
-		- Harry Stern (Discord: `ohmyachingtentacles`)
+    - Harry Stern (Discord: `ohmyachingtentacles`)

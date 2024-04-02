@@ -23,6 +23,6 @@ Files are not stored on databases, since that would be wasteful. Instead, files 
 
     It's important to pass on access of the database as new Webmasters replace old ones.
 
-    Members with access to Database as of **5/27/23**:
+    Members with access to Database as of **4/2/24**:
 
-    - Alan Tong
+    - Nihal Pinto (Discord: `illuminoeye_gaming`)
