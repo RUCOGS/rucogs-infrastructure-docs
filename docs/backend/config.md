@@ -49,7 +49,7 @@ For debugging purposes you can use a free platform like [mailtrap](https://mailt
     }
 ```
 
-For the release config you can use Gmail transport settings, so the emails are sent using our noreply gmail account:
+For the release config you can use Gmail transport settings, so the emails are sent using our no-reply Gmail account:
 
 ```yaml
 "nodemailer":

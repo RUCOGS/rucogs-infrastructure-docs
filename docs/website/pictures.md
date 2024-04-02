@@ -31,7 +31,7 @@ The website has a picture page that display pictures of past events at COGS. To 
     > py update_images.py
     ```
 
-3. Commit and push your changes to Github
+3. Commit and push your changes to GitHub
 
     ```bash
     > git add .

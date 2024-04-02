@@ -17,4 +17,4 @@ The behavior of the website is determined by `src/_settings.ts` file.
         -   `backendRelativeBaseUrl` - Relative path to the backend from the `backendDomain`.
         -   `graphQLRelativePath` - Relative to the GraphQL endpoint from the `backendDomain`.
         -   `selfHostedPrefix` - Prefix that indicates whether a file is self-hosted on the backend or not.
-        -   `cdnRelativePath` - Relative path to the cdn from the `backendDomain`.
+        -   `cdnRelativePath` - Relative path to the CDN from the `backendDomain`.

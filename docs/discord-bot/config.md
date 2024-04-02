@@ -24,13 +24,13 @@ The repository provides templates files ending in `.config.template.json` for th
 
 -   `type` - The type of server this config file is for. It can be set to either `"production"` or `"debug"`. If you are using `"debug"`, make sure to also name the config as `server.debug.config.json`.
 -   `backendDomain` - The domain for the backend.
--   `cdnDomain` - The domain for the cdn.
--   `cdnHttpsPrefix` - Https prefix for the cdn domain. This can be set to `http://` or `https://`.
+-   `cdnDomain` - The domain for the CDN.
+-   `cdnHttpsPrefix` - Https prefix for the CDN domain. This can be set to `http://` or `https://`.
 -   `httpsPrefix` - Https prefix for the backend domain. This can be set to `http://` or `https://`.
--   `wssPrefix` - Websocket prefix for the backend domain. This can be set to `ws://` or `wss://`.
--   `cdnRelativePath` - The path of the cdn relative to the `cdnDomain`.
--   `dynamicCdnRelativePath` - The path for getting dynamically generated images from the cdn, relative to the `cdnDomain`.
--   `graphqlRelativePath` - The path to the graphql endpoint relative to the `backendDomain`.
+-   `wssPrefix` - WebSocket prefix for the backend domain. This can be set to `ws://` or `wss://`.
+-   `cdnRelativePath` - The path of the CDN relative to the `cdnDomain`.
+-   `dynamicCdnRelativePath` - The path for getting dynamically generated images from the CDN, relative to the `cdnDomain`.
+-   `graphqlRelativePath` - The path to the GraphQL endpoint relative to the `backendDomain`.
 -   `selfHostedPrefix` - Prefix for indicated an image is self-hosted. By default it's `cdn://`
 -   `archiveCategoryId` - Id of the archive category of the discord server that the bot is operating in. The discord server the bot is operating in is specified by the Auth config.
 

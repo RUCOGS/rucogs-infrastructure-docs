@@ -7,11 +7,11 @@
 
 ## Overview
 
-The discord bot is built on Node.JS with Discord.JS using Typescript. GraphQL is used to communicate with the backend.
+The discord bot is built on Node.JS with Discord.JS using TypeScript. GraphQL is used to communicate with the backend.
 
 Tools:
 
--   Node.JS - An asynchronous event-driven Javascript runtime that lets you build network applications.
+-   Node.JS - An asynchronous event-driven JavaScript runtime that lets you build network applications.
 -   Apollo GraphQL - A GraphQL client/server library
 -   Discord.JS - A Discord bot framework for NodeJS that can interact with the Discord API
 
