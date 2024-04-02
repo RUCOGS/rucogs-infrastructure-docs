@@ -12,7 +12,9 @@
 
 ## Event Page Template
 
-Event pages tend to follow the same template, with a count down, a signup form, and an itinerary. Settings for the event are stored on the event page's component itself.
+Event pages tend to follow the same template, with a count down, a signup form, and an itinerary. Settings for the event are stored on the event page's component itself. Events also might have an event banner associated with it, which is displayed on the homepage of the website. 
+
+Event banners can be enabled/disabled by commenting/uncommentiing the `<app-event-header></app-event-header>` in `src\app\pages\home\home\home-page.component.html`. The contents of the event banner are found in the `src\app\modules\_core\event-header\event-header.component.html` file.
 
 !!! note "Variables"
 
@@ -39,8 +41,10 @@ Event pages tend to follow the same template, with a count down, a signup form, 
 
 ## Scarlet Game Jam
 
-1.  Uncomment the Scarlet Game Jam PageLink in `src/_settings.ts`
-2.  Open `src\app\pages\scarlet-game-jam\scarlet-game-jam\scarlet-game-jam-page.component.ts`
+1.  Uncomment the `<app-event-header></app-event-header>` in `src\app\pages\home\home\home-page.component.html`
+2.  Ensure `src\app\modules\_core\event-header\event-header.component.html` has the scarlet game jam `app-section` uncommented.
+3.  Uncomment the Scarlet Game Jam PageLink in `src/_settings.ts`  
+4.  Open `src\app\pages\scarlet-game-jam\scarlet-game-jam\scarlet-game-jam-page.component.ts`
 
     -   Edit the variables of the component to the correct values
 
@@ -59,7 +63,7 @@ Event pages tend to follow the same template, with a count down, a signup form, 
             - If `false`, a timer will be shown that counts down to the kickoff date and time.
             - If  `true`, then the `itchioLink` will be displayed, and the signup form will be renamed to "Late Signup Form".
 
-3.  Tweak the `scarlet-game-jam-page.component.html` to your needs
+5.  Tweak the `scarlet-game-jam-page.component.html` to your needs
 
     !!! note "Sections"
 
@@ -77,8 +81,10 @@ Event pages tend to follow the same template, with a count down, a signup form, 
 
 ## Global Game Jam
 
-1.  Uncomment the Global Game Jam PageLink in `src/_settings.ts`
-2.  Open `web\src\app\pages\global-game-jam\global-game-jam\global-game-jam-page.component.ts`
+1.  Uncomment the `<app-event-header></app-event-header>` in `src\app\pages\home\home\home-page.component.html`
+2.  Ensure `src\app\modules\_core\event-header\event-header.component.html` has the global game jam `app-section` uncommented.
+3.  Uncomment the Global Game Jam PageLink in `src/_settings.ts`
+4.  Open `web\src\app\pages\global-game-jam\global-game-jam\global-game-jam-page.component.ts`
 
     -   Edit the variables of the component to the correct values
 
@@ -91,7 +97,7 @@ Event pages tend to follow the same template, with a count down, a signup form, 
         - `signupLink` - Link to the Global Game Jam signup form
         - `siteLink` - Link to the Global Game Jam site link
 
-3.  Tweak the `global-game-jam-page.component.html` to your needs
+5.  Tweak the `global-game-jam-page.component.html` to your needs
 
     !!! note "Sections"
 
